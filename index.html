@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/style.css">
+    <link rel="stylesheet" href="asset/grid.css">
+    <link rel="stylesheet" href="asset/base.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+    <title>Document</title>
+    <style>
+        .header_one {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .notice2 {
+            display: flex;
+            color: var(--text-color);
+            font-weight: 445;
+            font-size: 16px;
+            margin-top: 8px;
+            /* margin-bottom: 2px; */
+        }
+
+        .header_notice2 {
+            margin-right: 8px;
+        }
+        .header_content_notice2{
+            font-weight: 500;
+        }
+        .header_content_notice2:hover {
+            animation: headernotice2 forwards 1.0s;
+            cursor: pointer;
+            /* animation: headernotice2 linear 2s , headernotice3 3s 5s forwards;
+            chạy 2s của headernotice2 rồi , delay 5s và chạy 3s, forwards sẽ giúp không quay trở lại */
+            /* animation-delay: 4s; */
+        }
+
+        #Call_phone {
+            animation: Call_phone 1.5s linear infinite alternate;
+            /* tên, chuyển động 1s , chuyển động liên tục(infinite) và đảo ở các chu kì tiếp tdeo(alternate) */
+        }
+        @keyframes Call_phone {
+            from {
+                transform: rotateY(-180deg);
+            }
+
+            to {
+                transform: rotateY(180deg);
+            }
+        }
+
+        @keyframes headernotice2 {
+            from {
+                color: black;
+            }
+
+            to {
+                color: rgb(230, 230, 24);
+            }
+        }
+
+        .header__border_two {
+            width: 100%;
+            height: auto;
+            border-top: 1px solid rgb(48, 47, 47);
+            margin-top: 8px;
+        }
+
+        .header__border_three {
+            display: flex;
+            width: 100%;
+            height: auto;
+            position: sticky;
+            background-color: white;
+            top: -1px;
+            border-bottom: 0.5px solid rgb(188 186 186);
+            z-index: 999;
+        }
+
+        .header_img {
+            background-position: 32px 16px;
+            height: 100px;
+            background-repeat: no-repeat;
+            background-size: 230px;
+            width: 20%;
+        }
+
+        .header__border_three_navabar {
+            display: flex;
+            align-items: center;
+            width: 80%;
+        }
+
+        .navbar_name {
+            position: relative;
+            font-weight: 800;
+            width: 100%;
+        }
+
+        .navbar_name_infor {
+            position: absolute;
+            width: 100%;
+            display: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 10px;
+            width: 260px;
+        }
+
+        tr,
+        td {
+            border: 1px solid var(--text-color);
+            padding: 12px;
+            width: 100%;
+            background-color: white;
+        }
+
+        .navbar_name_input {
+            border-radius: 20px;
+            font-size: 17px;
+            padding: 10px;
+        }
+
+        .navbar_name_search {
+            position: relative;
+            width: 100%;
+        }
+
+        .navbar_name_search>span {
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            font-size: 16px;
+
+        }
+
+        .name {
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        .name:hover {
+            background-color: yellow;
+            border-radius: 30px;
+            width: 100%;
+            height: auto;
+            padding: 8px;
+            cursor: pointer;
+            animation: name linear 0.33s, name_text 1s forwards;
+
+        }
+
+        td:hover {
+            background-color: yellow;
+            animation: td 0.3s forwards;
+        }
+
+        .navbar_name:hover>.navbar_name_infor {
+            display: block;
+            animation: navbar_name_infor 0.3s linear;
+        }
+
+        @keyframes td {
+            from {
+                padding-left: 8px;
+            }
+
+            to {
+                padding-left: 16px;
+            }
+        }
+
+        @keyframes navbar_name_infor {
+            from {
+                transform: rotateX(180deg);
+            }
+
+            to {
+                transform: rotateX(0deg);
+            }
+        }
+
+        @keyframes name {
+            from {
+                font-size: 16px;
+            }
+
+            to {
+                font-size: 20px;
+            }
+        }
+
+        @keyframes name_text {
+            from {
+                color: black;
+            }
+
+            to {
+                color: #fff;
+            }
+        }
+
+        .navbar_icon {
+            background-color: black;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: flex;
+            position: relative;
+        }
+        .navbar_icon_buy {
+            margin: auto;
+            color: white !important;
+        }
+
+        .navbar_number_buy {
+            position: absolute;
+            background-color: var(--primary-color);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            right: -3px;
+            top: -2px;
+            text-align: center;
+            font-weight: 400;
+        }
+        .header__border_three_mobile{
+            display: none;
+        }
+
+
+        @media only screen and (max-width: 81.25em) {
+            #Close_name{
+                display: none;
+            }
+            .header_img {
+                width: 33%;
+            }
+            .header__border_three_navabar {
+                width: 51%;
+            }
+            .navbar_name_short_information {
+                display: block;
+            }
+            
+        }
+        /* Mobile: width < 740px */
+        @media only screen and (max-width: 46.1875em) {
+            #Close_name{
+                display: none;
+            }
+            .header_img {
+                width: 36%;
+            }
+            .header__border_three_navabar {
+                width: 50%;
+            }
+            .navbar_name_input {
+                font-size: 13px;
+                padding: 8px;
+            }
+            .header_img {
+                background-position: 9px 16px;
+               
+            }
+            .navbar_name_short_information {
+                display: block;
+            }
+            .notice2 {
+                font-size: 12px;
+            }
+        }
+        @media only screen and (max-width: 500px) {
+            .header__border_three{
+                display: block;
+                
+            }
+            .header_img {
+                margin: auto;
+                width: 60%;
+            }
+            .navbar_name{
+                margin: auto;
+            }
+            .header__border_three_navabar {
+                width: 90%;
+            }
+            img {
+                margin-top: 0px;
+            }
+            .navbar_name_short_information {
+                display: block;
+            }
+            .notice2 {
+                font-size: 10px;
+            }
+            #navbar_name_icon_main{
+                margin-bottom: 12px;
+            }
+            
+        }
+
+        /* Tablet: width >= 740px and width < 1024px
+        @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+        
+        } */
+        /* .main_img{
+            width: 100%;
+            height: 681px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header_one">
+        <div class="notice1"></div>
+        <div class="notice2">
+            <div class="header_notice2">
+                <i class="fas fa-crown" id="Call_phone"></i>
+                <span class="header_content_notice2">
+                    KING AND QUEEN |
+                </span>
+            </div>
+            <div class="header_notice2">
+                <i class="fas fa-users" id="Call_phone"></i>
+                <span class="header_content_notice2">
+                    CHECK USER |
+                </span>
+            </div>
+            <div class="header_notice2">
+                <i class="fas fa-phone" id="Call_phone"></i>
+                <span class="header_content_notice2" >
+                    Hotline:0969613858
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="header__border_two">
+    </div>
+    <div class="header__border_three">
+        <div class="header_img" style="background-image: url('img/KINGSHOes.png');"></div>
+        <div class="header__border_three_navabar">
+            <div class="navbar_name">
+                <div class="name" id= "Close_name">GIỚI THIỆU</div>
+                <div class="navbar_name_infor">
+                    <table>
+                        <tr>
+                            <td>
+                                KINGSHOES.VN
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+            <div class="navbar_name" id= "Close_name">
+                <div class="name">NIKE</div>
+                <div class="navbar_name_infor">
+                    <table>
+                        <tr>
+                            <td>
+                                Nam
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Nữ
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="navbar_name" id= "Close_name">
+                <div class="name">ADIDAS</div>
+                <div class="navbar_name_infor">
+                    <table>
+                        <tr>
+                            <td>
+                                Nam
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Nữ
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="navbar_name" id= "Close_name">
+                <div class="name">JORDAN</div>
+                <div class="navbar_name_infor">
+                    <table>
+                        <tr>
+                            <td>
+                                AIR JORDAN
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+            <div class="navbar_name" id= "Close_name">
+                <div class="name">YEEZY</div>
+                <div class="navbar_name_infor">
+                    <table>
+                        <tr>
+                            <td>
+                                YEEZY BOOST 350
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                YEEZY BOOST 700
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="navbar_name" id= "Close_name">
+                <div class="name">OTHER BRAND</div>
+                <div class="navbar_name_infor">
+                    <table>
+                        <tr>
+                            <td>
+                                SNEAKER AUTHENTIC
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Giày thể thao chạy bộ -tập gym
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Giày tennis nike chính hãng
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Dép Authentic
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Crep Protect vệ sinh giày Sneaker
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Crep Protect vệ sinh giày Sneaker
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Box hộp đựng giày Sneaker
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="navbar_name" id= "Close_name">
+                <div class="name">SALE</div>
+                <div class="navbar_name_infor">
+                    <table>
+                        <tr>
+                            <td>
+                                25%
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                50%
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="navbar_name" id= "Close_name">
+                <div class="name" >DÂY GIÀY</div>
+            </div>
+            <div class="navbar_name" id= "Close_name">
+                <div class="name">SPA GIÀY</div>
+            </div>
+            <div class="navbar_name" id= "Close_name">
+                <div class="name">LIÊN HỆ</div>
+            </div>
+            <div class="navbar_name">
+                <div class="navbar_name_search">
+                    <input type="text" placeholder="Tìm kiếm ở đây" class="navbar_name_input">
+                    <span>
+                        <i class="fas fa-search"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="navbar_name" id = "navbar_name_icon_main">
+                <div class="navbar_icon">
+                    <div class="navbar_icon_buy">
+
+                        <i id="navbar_icon_buy_font" class="fas fa-shopping-cart"></i>
+                        <div class="navbar_number_buy">
+                            0
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="navbar_name_short">
+            <div class="navbar_name_short_information">
+                <i class="fas fa-align-justify"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="navbar_short_out">
+        <div for="click_on" class="navbar_name_short_view"></div>
+        <div class="right_name">
+            <div class="short_close">
+                <i class="fas fa-times"></i>
+            </div>
+            <div id="short_infor" class="short_infor" style="border-bottom: none">
+                <input type="text" placeholder="Tìm kiếm tại đây" id="short_infor_input">
+            </div>
+            <div class="short_infor">
+                <a href="">Giới thiệu</a>
+
+            </div>
+            <div class="short_infor">
+                <div class="name_short">
+                    <a href="">Nike</a>
+
+
+                </div>
+            </div>
+            <div class="short_infor">
+                <div class="name_short">
+                    <a href="">Adidas</a>
+
+                </div>
+
+            </div>
+            <div class="short_infor">
+                <div class="name_short">
+                    <a href="">Jordan</a>
+
+                </div>
+
+            </div>
+            <div class="short_infor">
+                <div class="name_short">
+                    <a href="">Yeezy</a>
+
+                </div>
+
+            </div>
+            <div class="short_infor">
+                <div class="name_short">
+                    <a href="">Other Brands</a>
+
+                </div>
+
+            </div>
+            <div class="short_infor">
+                <a href="">Sale</a>
+
+
+            </div>
+            <div class="short_infor">
+                <a href="">Dây Giày</a>
+
+
+            </div>
+            <div class="short_infor" style="border-bottom: none">
+                <a href="">Liên hệ</a>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- img -->
+    <!-- <div class="main_img" style="background-image: url(https://kingshoes.vn/data/upload/media/banner-sn3web-1571294680--acbihpps-1592386128--hipspcba-1622453987.jpg);"></div> -->
+    <img src="https://kingshoes.vn/data/upload/media/banner-sn3web-1571294680--acbihpps-1592386128--hipspcba-1622453987.jpg"
+        alt="">
+    <!-- main_shiper -->
+    <div class="grid" id="grid_background">
+        <div class="row">
+            <div class="col l-4 m-4 c-12">
+                <div class="item">
+                    <i class="far fa-credit-card" id="font_grid_three"></i>
+                    <h1 id="h1">CAM KẾT CHÍNH HÃNG</h1>
+                    <div style="font-weight: bold;">100 % Authentic</div>
+                    <div style="padding-bottom:16px; padding-top:6px;">Cam kết sản phẩm chính hãng từ Châu Âu, Châu
+                        Mỹ...</div>
+                </div>
+            </div>
+            <div class="col l-4 m-4 c-12">
+                <div class="item">
+                    <i class="fas fa-truck-moving" id="font_grid_three"></i>
+                    <h1 id="h1">GIAO HÀNG HỎA TỐC</h1>
+                    <div style="font-weight: bold;">Express delivery</div>
+                    <div style="padding-bottom:16px; padding-top:6px;">SHIP hỏa tốc 1h nhận hàng trong nội thành HCM
+                    </div>
+                </div>
+            </div>
+            <div class="col l-4 m-4 c-12">
+                <div class="item">
+                    <i class="fas fa-phone-volume" id="font_grid_three"></i>
+                    <h1 id="h1">HỖ TRỢ 24/24</h1>
+                    <div style="font-weight: bold;">Supporting 24/24</div>
+                    <div style="padding-bottom:16px; padding-top:6px;">Gọi ngay</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main_no_product">
+        <div class="main_no_product_outside">
+            <div class="main_close_number">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="X_close">
+                <i class="fas fa-times" id = "X_close_icon_X"></i>
+                <div class = "X_content">
+                    Hiện tại Shop chưa update sản phẩm. Xin cám ơn!
+                </div>
+            </div> 
+        </div>
+
+    </div>
+
+    <h2 class="product_new_main">
+        - SẢN PHẨM MỚI
+    </h2>
+    <!-- main -->
+    <div class="main_product">
+        <div class="grid">
+            <div class="row">
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://product.hstatic.net/1000282067/product/day_jogger_shoes_green_fw4829_05_standard_685082151c4c417290aa11b43366991d.jpg"
+                            alt="">
+                        <div class="main_item_name_shoes">
+                            Giày Adidas Day Jogger 'Dash Green Linen' FW4829 – AUTHENTIC SHOES</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                           500.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://kingshoes.vn/data/upload/media/nike-air-max-97-all-star-king-shoes-sneaker-real-hcm-1624258705.jpeg"
+                            alt="">
+                        <div class="main_item_name_shoes">NIKE AIR FORCE WHITE</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            450.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://kingshoes.vn/data/upload/media/giay-sneaker-chinh-hang-tphcm-tai-king-shoes-album-bo-suu-tap-2.jpg"
+                            alt="">
+                        <div class="main_item_name_shoes">NIKE AIR FORCE GOLD (Bản hiếm)</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            600.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://assets.adidas.com/images/w_600,f_auto,q_auto/bb3c446c914d4aef9a7da9f5012694f9_9366/Giay_Nite_Jogger_mau_xanh_la_F33837_07_standard.jpg"
+                            alt="">
+                        <div class="main_item_name_shoes">Giày Nite Jogger</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            700.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://kingshoes.vn/data/upload/media/gia%CC%80y-nike-air-zoom-tempo-next-mens-running-ci9923-400-king-shoes-sneaker-real-hcm-12-1634792785.jpeg"
+                            alt="">
+                        <div class="main_item_name_shoes">NIKE AIR FORCE 2</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            400.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://kingshoes.vn/data/upload/media/nike-epic-react-infinity-fk-cw5245-100-king-shoes-sneaker-real-hcm-1624258070.jpeg"
+                            alt="">
+                        <div class="main_item_name_shoes">AIR FORCE 1</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            850.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://kingshoes.vn/data/upload/media/nike-dunk-hi-cu7544-400-king-shoes-sneaker-real-hcm35-1623475900.jpg"
+                            alt="">
+                        <div class="main_item_name_shoes">NIKE AIR FORCE 1 BLUE</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            1.550.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/f8f48d79-4991-4eea-9680-25750533eae3/dunk-high-x-ambush-black-data-premiery.jpg"
+                            alt="">
+                        <div class="main_item_name_shoes">NIKE AIR FORCE 1 BLACK</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            1.500.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://kingshoes.vn/data/upload/media/balenciaga-542023-w1gb17580-nam-chinh-hang-hcm-king-shoes-sneaker-authentic-tan-binh-11.png"
+                            alt="">
+                        <div class="main_item_name_shoes">Giày Sneaker Balenciaga Track 3.0 Cam Xanh</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            3.500.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://1sneaker.vn/wp-content/uploads/2020/08/BALENCIAGA-STRIPLE-S-CLASSIC-BLUE.jpg"
+                            alt="">
+                        <div class="main_item_name_shoes">Giày Balenciaga Track 3.0 xanh đen</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            3.000.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="main_page">
+        <div class="main_page_center">
+            <div class = "main_page_number main_page_number_choose">1</div>
+            <div class = "main_page_number main_page_active_ok">2</div>
+            <div class = "main_page_number main_page_active_ok">3</div>
+            <div class = "main_page_number main_page_active_ok">4</div>
+            <div class = "main_page_number main_page_active_ok">></div>
+            <div class = "main_page_number main_page_active_ok">>></div>
+        </div>
+    </div>
+
+
+    <h2 class="product_new_main">
+        - SẢN PHẨM HOT
+    </h2>
+    <div class="main_product">
+        <div class="grid">
+            <div class="row">
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://kingshoes.vn/data/upload/media/yeezy-wave-runner-7006-1300x1300.jpg"
+                            alt="">
+                        <div class="main_item_name_shoes">Adidas Yeezy Boost 700</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            2.100.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://kingshoes.vn/data/upload/media/giay-Adidas-Yeezy-Boost-350-V2-Zebra-nam-nu-chinh-hang-tai-tphcm-CP9654-king-shoes-tan-binh-9(1).jpg"
+                            alt="">
+                        <div class="main_item_name_shoes">Adidas YEEZY BOOST 350 V2 ZEBRA - CP9654</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            650.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://snkrvn.com/wp-content/uploads/2019/08/adidas-yeezy-boost-700-magnet-11-960x640.jpg"
+                            alt="">
+                        <div class="main_item_name_shoes">Adidas Yeezy Boost 700 “Magnet”</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            800.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://lakbay.vn/cdn1/images/202106/goods_img/giay-alexander-mcqueen-full-trang-nam-nu-sieu-re-lakbayvn-P1633-1624060734136.jpg"
+                            alt="">
+                        <div class="main_item_name_shoes">Giày Alexander Mcqueen Full Trắng Nam Nữ</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            900.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://cf.shopee.vn/file/7203786a758abb3f916e729e73dd2a88"
+                            alt="">
+                        <div class="main_item_name_shoes">NIKE FOOTBALL</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            1.400.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2 class="product_new_main">
+        - SẢN PHẨM KHUYẾN MẠI
+    </h2>
+    <div class="main_product">
+        <div class="grid">
+            <div class="row">
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://c4img.onlinefriday.vn/r600x600/12_2018/b/42/4/3010564205_1543954671.jpg"
+                            alt="">
+                        <div class="main_item_name_shoes">Giày nam siêu nhẹ Hàn Quốc G504</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            1.299.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://cf.shopee.vn/file/9f3452296eeab7e6311f05ca36c92645"
+                            alt="">
+                        <div class="main_item_name_shoes">Giày Sneaker Nam Cao Cấp Hàn Quốc 2019 </div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            1.000.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://cf.shopee.vn/file/058042bf8707057cbf3998bf1165a478"
+                            alt="">
+                        <div class="main_item_name_shoes">Giày sneaker nam độn đế 5cm</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            2.999.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://kiza.vn/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/a/d/adidas_alphabounce_x_m_en_01.jpg"
+                            alt="">
+                        <div class="main_item_name_shoes">Giày Adidas Alphabounce Xám</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            1.750.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://media3.scdn.vn/img3/2019/3_21/hh25eh_simg_de2fe0_500x500_maxb.jpg"
+                            alt="">
+                        <div class="main_item_name_shoes">Giày thể thao PROPHERE Prophere TRẮNG HỒNG</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            1.500.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2 class="product_new_main">
+        - PHỤ KIỆN
+    </h2>
+    <div class="main_product">
+        <div class="grid">
+            <div class="row">
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://file.hstatic.net/1000069970/file/super_all_for_you_151e09aa4d954ab9b7429d211e89774e_1024x1024.jpg"
+                            alt="">
+                        <div class="main_item_name_shoes">Bộ vệ sinh cho giày Super All For You - Phụ kiện bảo vệ sneaker</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            300.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://salt.tikicdn.com/ts/tmp/64/5a/ab/8539507609877d61167d4c18b5365b04.jpg"
+                            alt="">
+                        <div class="main_item_name_shoes">Móc khóa Giày hoa cúc</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            20.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://cf.shopee.vn/file/6ab9b26f0a117bd5763a668fa4550ebd"
+                            alt="">
+                        <div class="main_item_name_shoes">Móc khóa Giày hoa cúc màu hồng</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            15.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://salt.tikicdn.com/ts/product%2Ff4%2F78%2Fdc%2F10dfd3b034403a20e5b4ed385ef6fe72.png"
+                            alt="">
+                        <div class="main_item_name_shoes">CREP PROTECT CURE - BỘ VỆ SINH GIÀY/ SNEAKER</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            200.000 đ
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-2-4 m-4 c-6">
+                    <div class="main_item">
+                        <div class="main_item_sale">-8%</div>
+                        <img class="main_item_img"
+                            src="https://product.hstatic.net/200000145547/product/e7254c325340b41eed51-600x600_11b36a05dbd742b78a14631addfed724.jpg"
+                            alt="">
+                        <div class="main_item_name_shoes">Tất Dệt Kiem - Vớ Dệt Kim Bóng Đá & Thể Thao</div>
+                        <div class="main_item_star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="main_item_price">
+                            25.000đ/1 đôi
+                        </div>
+
+
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2 class="product_new_main">
+        - TIN TỨC MỚI
+    </h2>
+    <div class="main_product">
+        <div class="grid">
+            <div class="row">
+                <div class="col l-3 m-6 c-12">
+                    <div class="main_item_new">
+                        <div class="main_item_img_background_img">
+                            <img class="main_item_img"
+                            src="https://kingshoes.vn/data/upload/media/spa-giay-chuyen-nghiep-king-shoes-ve-sinh-giay-crep-protect-hcm-1-1558785267-.jpg"
+                            alt="">
+                           
+                            <div class="main_item_background_hover"></div>
+                        </div>
+                        <div class="main_item_name_shoes">DỊCH VỤ VỆ SINH GIÀY SNEAKER CHUYÊN NGHIỆP TẠI HÀ NỘI</div>
+                        <div class="main_item_price">
+                            XEM THÊM
+                        </div>
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-3 m-6 c-12">
+                    <div class="main_item_new">
+                        <div class="main_item_img_background_img">
+                            <img class="main_item_img"
+                            src="https://cdn.elly.vn/uploads/2016/04/14070004/bang-do-size-giay.png"
+                            alt="">
+                        
+                            <div class="main_item_background_hover"></div>
+                        </div>
+                        <div class="main_item_name_shoes">CHỌN SIZE GIÀY NIKE, ADIDAS</div>
+                        <div class="main_item_price">
+                            XEM THÊM
+                        </div>
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-3 m-6 c-12">
+                    <div class="main_item_new">
+                        <div class="main_item_img_background_img">
+                            <img class="main_item_img"
+                            src="https://muasieunhanh.com/wp-content/uploads/2021/06/cach-do-size-giay-cho-be.jpg"
+                            alt="">
+                            <div class="main_item_background_hover"></div>
+                        </div>
+                        <div class="main_item_name_shoes">CÁCH ĐO CỠ CHÂN VÀ XÁC ĐỊNH SIZE VIỆT NAM, US, UK CHUẨN XÁC TẠI KING SHOES</div>
+                        <div class="main_item_price">
+                            XEM THÊM
+                        </div>
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+                <div class="col l-3 m-6 c-12">
+                    <div class="main_item_new">
+                        <div class="main_item_img_background_img">
+                            <img class="main_item_img"
+                            src="https://storage.googleapis.com/cdn.nhanh.vn/store/2920/artCT/73382/vesinhgiay1.png"
+                            alt="">
+                            <div class="main_item_background_hover"></div>
+                        </div>
+                        <div class="main_item_name_shoes">KING SHOES - HƯỚNG DẪN CÁCH VỆ SINH</div>
+                        <div class="main_item_name_shoes">GIÀY SNEAKER !!! KINGSHOESVN</div>
+    
+                        <div class="main_item_price">
+                            XEM THÊM
+                        </div>
+                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+    <!-- footer -->
+    <div class="footer_email">
+        <div class="footer_email_content">
+            <span class="content_mail">
+                <i class="fas fa-envelope"></i>
+            </span>
+            ĐĂNG KÝ NHẬN CODE 
+        </div>
+        <div class="footer_email_input">
+            <input type="text" id="footer_input" placeholder="Địa chỉ email của bạn">
+            <div class="input_register">Đăng ký</div>
+        </div>
+        <div class="footer_email_voucher">..Nhận ngay <span class="VOUCHER"> VOUCHER 100k </span>từ chúng tôi</div>
+    </div>
+
+
+    <!-- footer 2 -->
+    <div class="footer_2">
+        <div class="grid">
+            <div class="row">
+                <div class="col l-4 m-4 c-12">
+                    <div class="footer_item">
+                        <img class = "footer_item_img" src="/img/logo.png" alt="">
+                        <div class="footer_item_content">
+                            <div class = "footer_item_content_infor">THÔNG TIN LIÊN HỆ</div>
+                            <div class = "footer_item_content_infor_2">KINGSHOES.VN Trang Thông Tin Chính Thức.</div>
+                            <div class = "footer_item_content_infor_2"> Địa chỉ: 192/2 Nguyễn Thái Bình, Phường 12, Quận Tân Bình, Thành phố Hồ Chí Minh</div>
+                            <div class = "footer_item_content_infor_3">Email : cskh.kingshoes.vn@gmail.com</div>
+                            <div class="footer_item_content_email">
+                                <a href="">https://kingshoes.vn/</a>
+                            </div>
+                            <div class="footer_item_content_email">
+                                <a href="">https://twitter.com/KingShoes_vn</a>
+                            </div>
+                            <div class="footer_item_content_email">
+                                <a href="">https://instagram.com/KingShoes.vn</a>
+                            </div>
+                            <div class="footer_item_content_email">
+                                <a href="">https://facebook.com/pg/www.KingShoes.vn</a>
+                            </div>
+                            <div class="footer_item_content_email">
+                                <a href="">https://www.youtube.com/www.KingShoes.vn/</a>
+                            </div>
+                            <div class="footer_item_content_email">
+                                <a href="">http://bit.ly/KINGSHOES_map</a>
+                            </div>
+                            <div class="footer_item_content_email">
+                                <a href="">https://www.tiktok.com/@kingshoes.vn</a>
+                            </div>
+                            <div class="footer_item_content_email">
+                                <a href="">https://www.tiktok.com/@kingshoes_sneaker.radio</a>
+                            </div>
+                        </div>
+                        <div class="footer_item_video">
+                            <video controls autoplay muted>
+                                <source src="/video/KING SHOES video giới thiệu cửa hàng giày sneaker chính hãng tại HCM.mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l-4 m-4 c-12">
+                    <div class="footer_item_cus_po">
+                        <div class="footer_item_cus_po_customer">
+                            <div class="footer_item_cus_po_content">
+                                HỖ TRỢ KHÁCH HÀNG
+                            </div>
+                            <div class="footer_item_cus_po_list_content">
+                                <div class="footer_content_d">
+                                    <div class="footer_content_line"></div>
+                                    <div class="footer_content_d_a">
+                                        Chăm sóc khách hàng
+                                    </div>
+                                </div>
+                                <div class="footer_content_d">
+                                    <div class="footer_content_line"></div>
+                                    <div class="footer_content_d_a">
+                                        Thanh toán
+                                    </div>
+                                </div>
+                                <div class="footer_content_d">
+                                    <div class="footer_content_line"></div>
+                                    <div class="footer_content_d_a">
+                                        Hướng dẫn mua hàng
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer_item_cus_po_policy">
+                            <div class="footer_item_cus_po_content">
+                                CHÍNH SÁCH
+                            </div>
+                            <div class="footer_item_cus_po_list_content">
+                                <div class="footer_content_d">
+                                    <div class="footer_content_line"></div>
+                                    <div class="footer_content_d_a">
+                                        Chế độ bảo hành
+                                    </div>
+                                </div>
+                                <div class="footer_content_d">
+                                    <div class="footer_content_line"></div>
+                                    <div class="footer_content_d_a">
+                                        Chính sách đổi hàng
+                                    </div>
+                                   
+                                </div>
+                                <div class="footer_content_d">
+                                    <div class="footer_content_line"></div>
+                                    <div class="footer_content_d_a">
+                                        Bảo mật thông tin
+                                    </div>
+                                    
+                                </div>
+                                <div class="footer_content_d">
+                                    <div class="footer_content_line"></div>
+                                    <div class="footer_content_d_a">
+                                        Chính sách giao nhận
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer_item_cus_po_info_call">
+                        Số ĐKKD: 41N8041309 cấp ngày 17/8/2018.<br> Nơi cấp Ủy Ban Nhân Dân
+                        Quận Tân Bình. Hộ Kinh Doanh: KINGSHOES. <br>Hotline: 0909.300.746
+                    </div>
+                </div>
+                <div class="col l-4 m-4 c-12">
+                    <div class="footer_item_fanpage">
+                        <div class="footer_item_fanpage_content">
+                            FANPAGE
+                        </div>
+                        <div class="footer_item_fanpage_img">
+                            <img src="https://i.pinimg.com/originals/67/b2/a0/67b2a0719153b84fc1e6bbc74a4402a6.jpg" alt="">
+                        </div>
+                        <div class="footer_item_fanpage_line">
+                            <iframe src="img.html" width="100%">
+                                <p>Trình duyệt của bạn không hỗ trợ iframe.</p>
+                            </iframe>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="footer_the_end">
+            <div class="footer_the_end_one">
+                Bản quyền thuộc về <span class = "footer_the_end_one_KING">KINGSHOES.VN </span>
+                <span class="footer_the_end_one_span">Thiet Ke Web Chuẩn SEO </span>Bởi<span class="footer_the_end_one_span"> SEOWEBMAKER.COM</span>
+            </div>
+            <div class="footer_the_end_two">
+                <div class="footer_the_end_two_content">Giày chạy bộ,</div>
+                <div class="footer_the_end_two_content">Giày tập Gym,</div>
+                <div class="footer_the_end_two_content">Giày tập Yoga,</div>
+                <div class="footer_the_end_two_content">Giày thể thao,</div>
+                <div class="footer_the_end_two_content">Giày chính hãng</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/v4-shims.js"></script>
+<script src="JavaScript/main.js"></script>
+
+</html>
