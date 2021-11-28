@@ -38,3 +38,10 @@ click_X_close.onclick = function(e){
     var click_no_product = document.querySelector('.main_no_product');
     click_no_product.display = 'flex';
 }
+
+var product_sale = document.querySelectorAll('.main_item_sale');
+
+product_sale.forEach(function(sale){
+    var x = Math.floor(Math.random() * 51);
+    sale.innerHTML = '-'+ x + '%';
+})
