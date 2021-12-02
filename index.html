@@ -13,319 +13,16 @@
     <link rel="shortcut icon" type="image/png" href="img/logo.png" />
     <title>KING SHOES</title>
     <style>
-        .header_one {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .notice2 {
-            display: flex;
-            color: var(--text-color);
-            font-weight: 445;
-            font-size: 16px;
-            margin-top: 8px;
-            /* margin-bottom: 2px; */
-        }
-
-        .header_notice2 {
-            margin-right: 8px;
-        }
-        .header_content_notice2{
-            font-weight: 500;
-        }
-        .header_content_notice2:hover {
-            animation: headernotice2 forwards 1.0s;
-            cursor: pointer;
-            /* animation: headernotice2 linear 2s , headernotice3 3s 5s forwards;
-            chạy 2s của headernotice2 rồi , delay 5s và chạy 3s, forwards sẽ giúp không quay trở lại */
-            /* animation-delay: 4s; */
-        }
-
-        #Call_phone {
-            animation: Call_phone 1.5s linear infinite alternate;
-            /* tên, chuyển động 1s , chuyển động liên tục(infinite) và đảo ở các chu kì tiếp tdeo(alternate) */
-        }
-        @keyframes Call_phone {
-            from {
-                transform: rotateY(-180deg);
-            }
-
-            to {
-                transform: rotateY(180deg);
-            }
-        }
-
-        @keyframes headernotice2 {
-            from {
-                color: black;
-            }
-
-            to {
-                color: rgb(230, 230, 24);
-            }
-        }
-
-        .header__border_two {
-            width: 100%;
-            height: auto;
-            border-top: 1px solid rgb(48, 47, 47);
-            margin-top: 8px;
-        }
-
-        .header__border_three {
-            display: flex;
-            width: 100%;
-            height: auto;
-            position: sticky;
-            background-color: white;
-            top: -1px;
-            border-bottom: 0.5px solid rgb(188 186 186);
-            z-index: 999;
-        }
-
-        .header_img {
-            background-position: 32px 16px;
-            height: 100px;
-            background-repeat: no-repeat;
-            background-size: 230px;
-            width: 20%;
-        }
-
-        .header__border_three_navabar {
-            display: flex;
-            align-items: center;
-            width: 80%;
-        }
-
-        .navbar_name {
-            position: relative;
-            font-weight: 800;
-            width: 100%;
-        }
-
-        .navbar_name_infor {
-            position: absolute;
-            width: 100%;
-            display: none;
-        }
-
-        table {
-            border-collapse: collapse;
-            margin-top: 10px;
-            width: 260px;
-        }
-
-        tr,
-        td {
-            border: 1px solid var(--text-color);
-            padding: 12px;
-            width: 100%;
-            background-color: white;
-        }
-
-        .navbar_name_input {
-            border-radius: 20px;
-            font-size: 17px;
-            padding: 10px;
-        }
-
-        .navbar_name_search {
-            position: relative;
-            width: 100%;
-        }
-
-        .navbar_name_search>span {
-            position: absolute;
-            right: 12px;
-            top: 12px;
-            font-size: 16px;
-
-        }
-
-        .name {
-            width: 100%;
-            height: auto;
-            text-align: center;
-        }
-
-        .name:hover {
-            background-color: yellow;
-            border-radius: 30px;
-            width: 100%;
-            height: auto;
-            padding: 8px;
-            cursor: pointer;
-            animation: name linear 0.33s, name_text 1s forwards;
-
-        }
-
-        td:hover {
-            background-color: yellow;
-            animation: td 0.3s forwards;
-        }
-
-        .navbar_name:hover>.navbar_name_infor {
-            display: block;
-            animation: navbar_name_infor 0.3s linear;
-        }
-
-        @keyframes td {
-            from {
-                padding-left: 8px;
-            }
-
-            to {
-                padding-left: 16px;
-            }
-        }
-
-        @keyframes navbar_name_infor {
-            from {
-                transform: rotateX(180deg);
-            }
-
-            to {
-                transform: rotateX(0deg);
-            }
-        }
-
-        @keyframes name {
-            from {
-                font-size: 16px;
-            }
-
-            to {
-                font-size: 20px;
-            }
-        }
-
-        @keyframes name_text {
-            from {
-                color: black;
-            }
-
-            to {
-                color: #fff;
-            }
-        }
-
-        .navbar_icon {
-            background-color: black;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin: 0 auto;
-            display: flex;
-            position: relative;
-        }
-        .navbar_icon_buy {
-            margin: auto;
-            color: white !important;
-        }
-
-        .navbar_number_buy {
-            position: absolute;
-            background-color: var(--primary-color);
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            right: -3px;
-            top: -2px;
-            text-align: center;
-            font-weight: 400;
-        }
-        .header__border_three_mobile{
-            display: none;
-        }
-
-
-        @media only screen and (max-width: 81.25em) {
-            #Close_name{
-                display: none;
-            }
-            .header_img {
-                width: 33%;
-            }
-            .header__border_three_navabar {
-                width: 51%;
-            }
-            .navbar_name_short_information {
-                display: block;
-            }
-            
-        }
-        /* Mobile: width < 740px */
-        @media only screen and (max-width: 46.1875em) {
-            #Close_name{
-                display: none;
-            }
-            .header_img {
-                width: 36%;
-            }
-            .header__border_three_navabar {
-                width: 50%;
-            }
-            .navbar_name_input {
-                font-size: 13px;
-                padding: 8px;
-            }
-            .header_img {
-                background-position: 9px 16px;
-               
-            }
-            .navbar_name_short_information {
-                display: block;
-            }
-            .notice2 {
-                font-size: 12px;
-            }
-        }
-        @media only screen and (max-width: 500px) {
-            .header__border_three{
-                display: block;
-                
-            }
-            .header_img {
-                margin: auto;
-                width: 60%;
-            }
-            .navbar_name{
-                margin: auto;
-            }
-            .header__border_three_navabar {
-                width: 90%;
-            }
-            img {
-                margin-top: 0px;
-            }
-            .navbar_name_short_information {
-                display: block;
-            }
-            .notice2 {
-                font-size: 10px;
-            }
-            #navbar_name_icon_main{
-                margin-bottom: 12px;
-            }
-            
-        }
-
-        /* Tablet: width >= 740px and width < 1024px
-        @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
         
-        } */
-        /* .main_img{
-            width: 100%;
-            height: 681px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            
-        } */
+      
+
     </style>
 </head>
 
 <body>
+    <div class="scrollbar" id="style-1">
+        <div class="force-overflow"></div>
+    </div> 
     <!-- header -->
     <div class="header_one">
         <div class="notice1"></div>
@@ -498,7 +195,9 @@
                 <div class="name">SPA GIÀY</div>
             </div>
             <div class="navbar_name" id= "Close_name">
-                <div class="name">LIÊN HỆ</div>
+                <div class="name">
+                    <a href="order.html" target="_blank">ORDER</a>
+                </div>
             </div>
             <div class="navbar_name">
                 <div class="navbar_name_search">
@@ -588,7 +287,7 @@
 
             </div>
             <div class="short_infor" style="border-bottom: none">
-                <a href="">Liên hệ</a>
+                <a href="order.html" target="_blank">Đặt hàng</a>
 
 
             </div>
@@ -666,7 +365,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
                         </div>
                         <div class="main_item_price">
                            500.000 đ
@@ -688,7 +387,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
                         </div>
                         <div class="main_item_price">
                             450.000 đ
@@ -709,8 +408,8 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
                         </div>
                         <div class="main_item_price">
                             600.000 đ
@@ -750,11 +449,13 @@
                             alt="">
                         <div class="main_item_name_shoes">NIKE AIR FORCE 2</div>
                         <div class="main_item_star">
+                            
+
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
                         </div>
                         <div class="main_item_price">
                             400.000 đ
@@ -778,7 +479,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
                         </div>
                         <div class="main_item_price">
                             850.000 đ
@@ -800,14 +501,11 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
                         </div>
                         <div class="main_item_price">
                             1.550.000 đ
                         </div>
-
-
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
                 <div class="col l-2-4 m-4 c-6">
@@ -822,14 +520,11 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
                         </div>
                         <div class="main_item_price">
                             1.500.000 đ
                         </div>
-
-
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
                 <div class="col l-2-4 m-4 c-6">
@@ -844,14 +539,11 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
                         </div>
                         <div class="main_item_price">
                             3.500.000 đ
                         </div>
-
-
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
                 <div class="col l-2-4 m-4 c-6">
@@ -871,9 +563,6 @@
                         <div class="main_item_price">
                             3.000.000 đ
                         </div>
-
-
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
             </div>
@@ -911,14 +600,11 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
                         </div>
                         <div class="main_item_price">
                             2.100.000 đ
                         </div>
-
-
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
                 <div class="col l-2-4 m-4 c-6">
@@ -933,14 +619,11 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
                         </div>
                         <div class="main_item_price">
                             650.000 đ
                         </div>
-
-
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
                 <div class="col l-2-4 m-4 c-6">
@@ -955,14 +638,11 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
                         </div>
                         <div class="main_item_price">
                             800.000 đ
                         </div>
-
-
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
                 <div class="col l-2-4 m-4 c-6">
@@ -977,14 +657,11 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
                         </div>
                         <div class="main_item_price">
                             900.000 đ
                         </div>
-
-
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
                 <div class="col l-2-4 m-4 c-6">
@@ -1004,9 +681,6 @@
                         <div class="main_item_price">
                             1.400.000 đ
                         </div>
-
-
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
             </div>
@@ -1032,14 +706,11 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
                         </div>
                         <div class="main_item_price">
                             1.299.000 đ
                         </div>
-
-
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
                 <div class="col l-2-4 m-4 c-6">
@@ -1054,14 +725,11 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
                         </div>
                         <div class="main_item_price">
                             1.000.000 đ
                         </div>
-
-
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
                 <div class="col l-2-4 m-4 c-6">
@@ -1076,14 +744,11 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
                         </div>
                         <div class="main_item_price">
                             2.999.000 đ
                         </div>
-
-
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
                 <div class="col l-2-4 m-4 c-6">
@@ -1103,9 +768,6 @@
                         <div class="main_item_price">
                             1.750.000 đ
                         </div>
-
-
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
                 <div class="col l-2-4 m-4 c-6">
@@ -1120,14 +782,11 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
                         </div>
                         <div class="main_item_price">
                             1.500.000 đ
                         </div>
-
-
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
             </div>
@@ -1158,9 +817,6 @@
                         <div class="main_item_price">
                             300.000 đ
                         </div>
-
-
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
                 <div class="col l-2-4 m-4 c-6">
@@ -1180,9 +836,6 @@
                         <div class="main_item_price">
                             20.000 đ
                         </div>
-
-
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
                 <div class="col l-2-4 m-4 c-6">
@@ -1202,9 +855,6 @@
                         <div class="main_item_price">
                             15.000 đ
                         </div>
-
-
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
                 <div class="col l-2-4 m-4 c-6">
@@ -1224,9 +874,6 @@
                         <div class="main_item_price">
                             200.000 đ
                         </div>
-
-
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
                 <div class="col l-2-4 m-4 c-6">
@@ -1246,9 +893,6 @@
                         <div class="main_item_price">
                             25.000đ/1 đôi
                         </div>
-
-
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
             </div>
@@ -1272,10 +916,10 @@
                             <div class="main_item_background_hover"></div>
                         </div>
                         <div class="main_item_name_shoes">DỊCH VỤ VỆ SINH GIÀY SNEAKER CHUYÊN NGHIỆP TẠI HÀ NỘI</div>
-                        <div class="main_item_price">
-                            XEM THÊM
+                        <div class="main_item_price_add">
+                            <span class="content_add">XEM THÊM</span>
+                            <span class="add_content_arrow"><i class="fas fa-long-arrow-alt-right"></i></span>
                         </div>
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
                 <div class="col l-3 m-6 c-12">
@@ -1288,10 +932,10 @@
                             <div class="main_item_background_hover"></div>
                         </div>
                         <div class="main_item_name_shoes">CHỌN SIZE GIÀY NIKE, ADIDAS</div>
-                        <div class="main_item_price">
-                            XEM THÊM
+                        <div class="main_item_price_add">
+                            <span class="content_add">XEM THÊM</span>
+                            <span class="add_content_arrow"><i class="fas fa-long-arrow-alt-right"></i></span>
                         </div>
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
                 <div class="col l-3 m-6 c-12">
@@ -1303,10 +947,11 @@
                             <div class="main_item_background_hover"></div>
                         </div>
                         <div class="main_item_name_shoes">CÁCH ĐO CỠ CHÂN VÀ XÁC ĐỊNH SIZE VIỆT NAM, US, UK CHUẨN XÁC TẠI KING SHOES</div>
-                        <div class="main_item_price">
-                            XEM THÊM
+                        <div class="main_item_price_add">
+                            <span class="content_add">XEM THÊM</span>
+                            <span class="add_content_arrow"><i class="fas fa-long-arrow-alt-right"></i></span>
                         </div>
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
+                      
                     </div>
                 </div>
                 <div class="col l-3 m-6 c-12">
@@ -1317,13 +962,12 @@
                             alt="">
                             <div class="main_item_background_hover"></div>
                         </div>
-                        <div class="main_item_name_shoes">KING SHOES - HƯỚNG DẪN CÁCH VỆ SINH</div>
-                        <div class="main_item_name_shoes">GIÀY SNEAKER !!! KINGSHOESVN</div>
+                        <div class="main_item_name_shoes">KING SHOES - HƯỚNG DẪN CÁCH VỆ SINH<br>GIÀY SNEAKER !!! KINGSHOESVN</div>
     
-                        <div class="main_item_price">
-                            XEM THÊM
+                        <div class="main_item_price_add">
+                            <span class="content_add">XEM THÊM</span>
+                            <span class="add_content_arrow"><i class="fas fa-long-arrow-alt-right"></i></span>
                         </div>
-                        <!-- <div class="main_item_img" style="background-image: url()"></div> -->
                     </div>
                 </div>
             </div>
@@ -1353,7 +997,7 @@
             <div class="row">
                 <div class="col l-4 m-4 c-12">
                     <div class="footer_item">
-                        <img class = "footer_item_img" src="/img/logo.png" alt="">
+                        <img class = "footer_item_img" src="img/logo.png" alt="">
                         <div class="footer_item_content">
                             <div class = "footer_item_content_infor">THÔNG TIN LIÊN HỆ</div>
                             <div class = "footer_item_content_infor_2">KINGSHOES.VN Trang Thông Tin Chính Thức.</div>
@@ -1382,6 +1026,12 @@
                             </div>
                             <div class="footer_item_content_email">
                                 <a href="">https://www.tiktok.com/@kingshoes_sneaker.radio</a>
+                            </div>
+                            <div class="footer_item_content_email">
+                                <a href="">☎️ Hotline Bán Hàng: 0909.300.746 - 0909.45.0001</a>
+                            </div>
+                            <div class="footer_item_content_email">
+                                <a href="">☎️ Hotline CSKH: 0902.368.001</a>
                             </div>
                         </div>
                         <div class="footer_item_video">
@@ -1490,7 +1140,21 @@
             </div>
         </div>
     </div>
-
+    <div class="footer_icon_facebook">
+        <div class="arround_icon_facebook">
+        </div>
+        <i class="fab fa-facebook" id= "facebook" ></i>
+    </div>
+    <div class="footer_icon_messenger">
+        <div class="arround_icon_messenger">
+        </div>
+        <i class="fab fa-facebook-messenger" id= "messenger"></i>
+    </div>
+    <div class="footer_icon_rocket">
+        <div class="arround_icon_rocket">
+        </div>
+        <i class="fas fa-space-shuttle" id= "rocket"></i>
+    </div>
 </body>
 <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/v4-shims.js"></script>

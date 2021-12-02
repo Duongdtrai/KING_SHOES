@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KING SHOES | Orders</title>
+    <link rel="stylesheet" href="asset/grid.css">
+    <link rel="stylesheet" href="asset/base.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+    <link rel="stylesheet" href="asset/order.css">
+    <link rel="shortcut icon" type="image/png" href="img/logo.png" />
+    <style>
+        *{
+            margin: 0; padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            
+            
+        }
+        .main-form{
+            margin: 0 auto;
+            height: auto;
+            width: 100%;
+            padding-top:20px;
+            padding-bottom: 20px;
+        }
+        form {
+            box-shadow: 0 2px 26px 0 rgba(51, 62, 73, 0.3);
+            padding: 40px;
+            width: 50%;
+            min-height: 200px;
+            margin: 0 auto;
+            background-color: rgb(248 233 220);
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        label{
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .form_oder{
+            margin-top:20px;
+            margin:0 auto;
+            width: 100%;
+        }
+        input {
+            border-radius: 4px;
+            border: 0.5px solid rgb(104, 100, 100);
+            padding: 10px;
+            font-size: 15px;
+            width: 100%;
+            margin-bottom: 20px;
+            -webkit-border-radius: 4px; 
+            -moz-border-radius: 4px; 
+            /* font-family:"Ubuntu Light","Ubuntu","Ubuntu Mono","Segoe Print","Segoe UI"; */
+            -moz-box-shadow: inset 0 0 4px rgba(0,0,0,0.2); 
+            -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2); 
+            box-shadow: inner 0 0 4px rgba(0, 0, 0, 0.2);
+        }
+        input:focus { 
+            outline: none !important;
+            border-color: #cec571;
+            box-shadow: 0 0 10px #cec571;
+        }
+        button[type="submit"] {
+            background-color: red;
+            display:flex;
+            justify-content: center;
+            margin: 0 auto;
+            text-align: center;
+            width: 200px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: rgb(255, 153, 0);
+            padding: 16px;
+            cursor: pointer;
+            outline: none;
+            border: 1px solid transparent;
+            box-shadow: 0 2px 5px 0 rgba(51, 62, 73, 0.1);
+        }
+        button[type="submit"]:hover{
+            background-color: rgb(255, 153, 0);
+        }
+        .main_title {
+            margin-bottom: 16px;
+            display: flex;
+            width: 100%;
+            font-size: 26px;
+            height: auto;
+            justify-content: space-between;
+        }
+        .main_title_img{
+            text-align: center;
+            width: 42%;
+            height: auto;
+        }
+        .main_title_img img {
+            width: 70%;
+        }
+        .main_title_content {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            width: 52%;
+            line-height: 28px;
+        }
+        .img_main{
+             background-image: url('https://bizweb.dktcdn.net/100/419/301/files/giay-converse-hoa-tiet.jpg?v=1615480024365');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed; 
+            width: 100%;
+        }
+        @media only screen and (max-width: 81.25em) {
+            form {
+                width: 70%;
+            }
+        }
+        /* Mobile: width < 740px */
+        @media only screen and (max-width: 46.1875em) {
+            form {
+                width: 80%;
+            }
+            .main_title {
+                width: 100%;
+                font-size: 18px;
+
+            }
+            .main_title_img{
+                text-align: center;
+                width: 56%;
+                height: auto;
+            }
+            .main_title_img img{
+                width: 100%;
+            }
+            .main_title_content {
+                font-size: 13px;
+                width: 44%;
+            }
+        }
+
+        /* Tablet: width >= 740px and width < 1024px */
+        @media only screen and (max-width: 40em) {
+            form {
+                width: 90%;
+            }
+            .main_title {
+                width: 100%;
+                font-size: 14px;
+            }
+            .main_title_img{
+                text-align: center;
+                width: 56%;
+                height: auto;
+            }
+            .main_title_img img {
+                    width: 90%;
+                }
+            .main_title_content {
+                width: 44%;
+            }
+        }
+        @media only screen and (max-width: 375px) {
+            form {
+                width: 90%;
+            }
+            .main_title {
+                width: 100%;
+                font-size: 10px;
+            }
+            .main_title_img {
+                text-align: center;
+                width: 60%;
+                height: 24px;
+            }
+            .main_title_img img{
+                width: 100%;
+            }
+            .main_title_content {
+                font-size: 13px;
+                width: 37%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img_main">
+        <div class="main_no_product">
+            <div class="main_no_product_outside">
+                <div class="main_close_number">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="X_close">
+                    <span class="icon">
+                        <i class="fas fa-check" id = "X_close_icon_X" ></i>
+                    </span>
+                    
+                    <div class = "X_content">
+                        Cám ơn quý khách đã lựa chọn Shoes
+                    </div>
+                </div> 
+            </div>
+    
+        </div>
+        <div class="main_no_product_2">
+            <div class="main_no_product_outside">
+                <div class="main_close_number">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="X_close">
+                    <i class="fas fa-times" id = "X_close_icon_X_2"></i>
+                    <div class = "X_content">
+                        Vui lòng nhập đầy đủ!
+                    </div>
+                </div> 
+            </div>
+            
+        </div>
+        <div class="main-form">
+            <form id="test-form" method="GET" action="https://script.google.com/macros/s/AKfycbz2XyW7GZxzl60mNCdFSb079DmQNyoz46UvJD0HmlCV9PxyFCOtJpDwGoZyvV58CTBx/exec">
+                
+                <div class="main_title">
+                    <div class="main_title_img">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="main_title_content">ShopShoes luôn đồng hành cùng các bạn❤️. Chúc các bạn thật nhiều sức khỏe</div>
+                    
+                </div>
+                <div class="form_oder">
+                    <label for="">Họ và tên</label>
+                    <input type="text" name="Họ và tên" placeholder="Phạm Tùng Dương" required/>
+                </div>
+                <div class="form_oder">
+                    <label for="">Email</label>
+                    <input type="text" name="Email" placeholder="examples@example.com" required/>
+                </div>
+                <div class="form_oder">
+                    <label for="">Tên sản phẩm:</label>
+                    <input type="text" name="Tên giày" placeholder="MC QUEEN" required/>
+                </div>
+                <div class="form_oder">
+                    <label for="">Mã hàng</label>
+                    <input type="text" name="Mã hàng" placeholder="ABC123" required/>
+                </div>
+                <div class="form_oder">
+                    <label for="">Size</label>
+                    <input type="text" name="Size Shoes" placeholder="40" required/>
+                </div>
+                <div class="form_oder">
+                    <label for="">Số điện thoại</label>
+                    <input type="text" name="Số điện thoại" placeholder="xxx-xxx-xxxx" required/>
+                </div>
+                <div class="form_oder">
+                    <label for="">Địa chỉ</label>
+                    <input type="text" name="Địa chỉ" placeholder="Thanh Hóa" required/>
+                </div>
+                <div class="form_oder">
+                    <label for="">Ghi chú</label>
+                    <input type="text" name="Ghi chú" placeholder="Note" required/>
+                </div>
+                <button type="submit" onclick="tai_lai_trang()">Gửi</button>
+            </form>
+    
+        </div>
+    </div>
+       
+   
+    
+</body>
+
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var submit = $("button[type='submit']");
+        submit.click(function () {
+            var data = $('form#test-form').serialize();
+            $.ajax({
+                type: 'GET',
+                url: 'https://script.google.com/macros/s/AKfycbz2XyW7GZxzl60mNCdFSb079DmQNyoz46UvJD0HmlCV9PxyFCOtJpDwGoZyvV58CTBx/exec',
+                dataType: 'json',
+                crossDomain: true,
+                data: data,
+                success: function (data) {
+                    if (data == 'false') {
+                        alert(
+                            'Thêm không thành công, bạn cũng có thể sử dụng để hiển thị Popup hoặc điều hướng');
+                    } else {
+                        // var main_product= document.querySelector('.main_no_product');
+                        // main_product.style.display = 'flex';
+                        
+                    }
+                }
+            });
+            return false;
+        });
+    });
+    
+    
+</script>
+<script>
+    function tai_lai_trang(){
+        var input_text = document.querySelectorAll("input[type='text']");
+        var count = 0;
+        input_text.forEach((input)=>{
+            if(input.value){
+                count +=1;
+            }
+        })
+        if(count == 8){
+            var main_product= document.querySelector('.main_no_product');
+            main_product.style.display = 'flex';
+            var click_no_product = document.querySelector('.main_no_product');
+            click_no_product.onclick = function(e){
+                click_no_product.style.display = 'none';
+                location.reload();
+            }
+            var click_close_number = document.querySelector('.main_close_number');
+            click_close_number.onclick = function(e){
+                e.stopPropagation();
+                var click_no_product = document.querySelector('.main_no_product');
+                click_no_product.style.display = 'none';
+                location.reload();
+            }
+            var click_X_close = document.querySelector('.X_close');
+            click_X_close.onclick = function(e){
+                e.stopPropagation();
+                var click_no_product = document.querySelector('.main_no_product');
+                click_no_product.display = 'flex';
+            }
+            
+            
+        }
+        else{
+            var main_product= document.querySelector('.main_no_product_2');
+            main_product.style.display = 'flex';
+            var click_no_product = document.querySelector('.main_no_product_2');
+            click_no_product.onclick = function(e){
+                click_no_product.style.display = 'none';
+            }
+            var click_close_number = document.querySelector('.main_close_number');
+            click_close_number.onclick = function(e){
+                e.stopPropagation();
+                var click_no_product = document.querySelector('.main_no_product_2');
+                click_no_product.style.display = 'none';
+            }
+            var click_X_close = document.querySelector('.X_close');
+            click_X_close.onclick = function(e){
+                e.stopPropagation();
+                var click_no_product = document.querySelector('.main_no_product_2');
+                click_no_product.display = 'flex';
+            }
+        }
+        
+    }
+</script>
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/v4-shims.js"></script>
+<script src="JavaScript/order.js"></script>
+</html>
